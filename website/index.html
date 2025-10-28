@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BikeReady — Ride a Bicycle at Any Age</title>
+  <meta name="description" content="Clear guides, safety tips, and practice plans to learn to ride a bicycle at any age. Kids, teens, adults, and seniors." />
+  <link rel="icon" href="./images/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <meta property="og:title" content="BikeReady — Ride a Bicycle at Any Age" />
+  <meta property="og:description" content="Clear guides, safety tips, and practice plans for every age." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="BikeReady home">
+        <img src="./images/logo.svg" alt="" width="36" height="36" aria-hidden="true" />
+        <span class="brand-text">BikeReady</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <ul id="primary-nav" class="nav-list" data-collapsible>
+        <li><a href="./pages/kids.html">Kids</a></li>
+        <li><a href="./pages/teens.html">Teens</a></li>
+        <li><a href="./pages/adults.html">Adults</a></li>
+        <li><a href="./pages/seniors.html">Seniors</a></li>
+        <li><a href="./pages/safety.html">Safety</a></li>
+        <li><a class="btn btn-primary" href="./pages/practice-plan.html">Practice Plan</a></li>
+        <li><a href="./pages/resources.html">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Ride a Bicycle at Any Age</h1>
+          <p class="tagline">Step-by-step guides, safety-first tips, and personalized practice plans for kids, teens, adults, and seniors.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="./pages/practice-plan.html">Generate your plan</a>
+            <a class="btn btn-secondary" href="./pages/safety.html">Learn safety basics</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <img src="./images/logo.svg" alt="" width="200" height="200" />
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container feature-grid">
+        <article class="card">
+          <img src="./images/balance.svg" alt="" width="40" height="40" aria-hidden="true" />
+          <h2>Learn by age</h2>
+          <p>Age-tailored guides help you start right and progress safely.</p>
+          <a class="card-link" href="./pages/kids.html">Explore guides</a>
+        </article>
+        <article class="card">
+          <img src="./images/helmet.svg" alt="" width="40" height="40" aria-hidden="true" />
+          <h2>Safety first</h2>
+          <p>Helmet fit, ABC check, signaling, routes, and traffic rules.</p>
+          <a class="card-link" href="./pages/safety.html">Read safety tips</a>
+        </article>
+        <article class="card">
+          <img src="./images/plan.svg" alt="" width="40" height="40" aria-hidden="true" />
+          <h2>Practice plans</h2>
+          <p>Generate a 2–8 week plan that fits your schedule and goals.</p>
+          <a class="card-link" href="./pages/practice-plan.html">Build a plan</a>
+        </article>
+        <article class="card">
+          <img src="./images/community.svg" alt="" width="40" height="40" aria-hidden="true" />
+          <h2>Helpful resources</h2>
+          <p>Bike sizing, gear, local classes, and recommended checklists.</p>
+          <a class="card-link" href="./pages/resources.html">Browse resources</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="how">
+      <div class="container">
+        <h2>How BikeReady helps</h2>
+        <ol class="steps">
+          <li><strong>Pick your guide:</strong> Kids, teens, adults, or seniors.</li>
+          <li><strong>Review safety:</strong> Quick checks and traffic skills.</li>
+          <li><strong>Generate a plan:</strong> Get a weekly schedule tailored to you.</li>
+          <li><strong>Practice & track:</strong> Build skills with short, focused sessions.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> BikeReady. Ride with confidence.</p>
+      <nav aria-label="Footer">
+        <a href="./pages/resources.html">Resources</a>
+        <a href="./pages/safety.html">Safety</a>
+        <a href="./pages/practice-plan.html">Practice Plan</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="./js/main.js" defer></script>
+</body>
+</html>

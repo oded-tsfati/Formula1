@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Practice Plan — BikeReady</title>
+  <link rel="icon" href="../images/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <meta name="description" content="Generate a personalized cycling practice plan based on age, goals, and time." />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="../index.html"><img src="../images/logo.svg" alt="" width="28" height="28" aria-hidden="true" /><span class="brand-text">BikeReady</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"><span class="sr-only">Toggle navigation</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <ul id="primary-nav" class="nav-list" data-collapsible>
+        <li><a href="./kids.html">Kids</a></li>
+        <li><a href="./teens.html">Teens</a></li>
+        <li><a href="./adults.html">Adults</a></li>
+        <li><a href="./seniors.html">Seniors</a></li>
+        <li><a href="./safety.html">Safety</a></li>
+        <li><a class="btn btn-primary" aria-current="page" href="./practice-plan.html">Practice Plan</a></li>
+        <li><a href="./resources.html">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="container" tabindex="-1">
+    <h1>Practice Plan Generator</h1>
+    <p class="tagline">Answer a few questions to create a 2–8 week plan you can follow.</p>
+
+    <section class="card">
+      <form id="plan-form" aria-describedby="form-help">
+        <div style="display:grid; gap:.75rem; grid-template-columns: repeat(2, minmax(0,1fr));">
+          <label>Age group
+            <select name="age" required>
+              <option value="kids">Kids</option>
+              <option value="teens">Teens</option>
+              <option value="adults" selected>Adults</option>
+              <option value="seniors">Seniors</option>
+            </select>
+          </label>
+          <label>Experience level
+            <select name="level" required>
+              <option value="first-time" selected>First time</option>
+              <option value="some">Some riding</option>
+              <option value="returning">Returning</option>
+            </select>
+          </label>
+          <label>Weeks
+            <input type="number" name="weeks" min="2" max="8" value="4" required />
+          </label>
+          <label>Sessions per week
+            <input type="number" name="freq" min="2" max="6" value="3" required />
+          </label>
+          <label>Session length (minutes)
+            <input type="number" name="minutes" min="10" max="60" value="25" required />
+          </label>
+          <label>Goal focus
+            <select name="goal" required>
+              <option value="balance">Balance & control</option>
+              <option value="confidence" selected>Confidence</option>
+              <option value="endurance">Endurance</option>
+            </select>
+          </label>
+        </div>
+        <p id="form-help" class="tagline">You can adjust the plan after generating.</p>
+        <button class="btn btn-primary" type="submit">Generate plan</button>
+      </form>
+    </section>
+
+    <section id="plan-output" class="card" style="display:none">
+      <h2>Your plan</h2>
+      <div id="plan-meta" class="tagline"></div>
+      <div id="plan-weeks" style="display:grid; gap:1rem; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); margin-top:.5rem;"></div>
+      <button id="download-btn" class="btn btn-secondary" type="button">Download as JSON</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> BikeReady</p>
+      <nav aria-label="Footer">
+        <a href="./resources.html">Resources</a>
+        <a href="./safety.html">Safety</a>
+        <a href="./practice-plan.html">Practice Plan</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+  <script src="../js/plan.js" defer></script>
+</body>
+</html>
